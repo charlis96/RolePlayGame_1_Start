@@ -1,0 +1,130 @@
+<mxfile host="65bd71144e">
+    <diagram id="Og5VD9N0vXUdqN74VKZp" name="Page-1">
+        <mxGraphModel dx="1016" dy="718" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Wizard" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="40" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Elf&lt;br&gt;&lt;br&gt;Dwarf&lt;br&gt;&lt;br&gt;Inventory" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="2">
+                    <mxGeometry x="110" y="40" width="70" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Name&lt;br&gt;&lt;br&gt;HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="2">
+                    <mxGeometry x="10" y="40" width="70" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="119.76" y="170" as="sourcePoint"/>
+                        <mxPoint x="120" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="Elf" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="40" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Name&lt;br&gt;&lt;br&gt;HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="8">
+                    <mxGeometry x="10" y="40" width="70" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="Wizard&lt;br&gt;&lt;br&gt;Dwarf&lt;br&gt;&lt;br&gt;Inventory" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="8">
+                    <mxGeometry x="110" y="50" width="70" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8" target="8">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="399.76" y="170" as="sourcePoint"/>
+                        <mxPoint x="400" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="Dwarf" style="swimlane;startSize=23;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="40" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="Name&lt;br&gt;&lt;br&gt;HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="10">
+                    <mxGeometry x="10" y="40" width="70" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Elf&lt;br&gt;&lt;br&gt;Wizard&lt;br&gt;&lt;br&gt;Inventory" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="10">
+                    <mxGeometry x="120" y="45" width="70" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="10" target="10">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="659.76" y="170" as="sourcePoint"/>
+                        <mxPoint x="660" y="70" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="Inventory" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="290" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Armor&lt;br&gt;&lt;br&gt;Weapon&lt;br&gt;&lt;br&gt;Miscellaneous&lt;br&gt;&lt;br&gt;SpellBook" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="12">
+                    <mxGeometry x="110" y="40" width="80" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="AddItem&lt;br&gt;&lt;br&gt;RemoveItem&lt;br&gt;&lt;br&gt;HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="12">
+                    <mxGeometry x="10" y="40" width="70" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="12" target="12">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="119.75999999999999" y="420" as="sourcePoint"/>
+                        <mxPoint x="120" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="Armor" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="290" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="14">
+                    <mxGeometry x="10" y="60" width="70" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="Inventory" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="14">
+                    <mxGeometry x="120" y="72.5" width="70" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="14" target="14">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="399.76" y="420" as="sourcePoint"/>
+                        <mxPoint x="400" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" value="Weapon" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="290" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="16">
+                    <mxGeometry x="10" y="50" width="70" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="Inventory" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="16">
+                    <mxGeometry x="110" y="72.5" width="70" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="16" target="16">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="659.76" y="420" as="sourcePoint"/>
+                        <mxPoint x="660" y="320" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="SpellBook" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="20" y="550" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="18">
+                    <mxGeometry x="10" y="50" width="70" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="Inventory" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="18">
+                    <mxGeometry x="110" y="72.5" width="70" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="18" target="18">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="119.75999999999999" y="680" as="sourcePoint"/>
+                        <mxPoint x="120" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" value="Miscellaneous" style="swimlane;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="550" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="39">
+                    <mxGeometry x="10" y="60" width="70" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="Inventory" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="39">
+                    <mxGeometry x="120" y="82.5" width="70" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="39" target="39">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="399.76" y="680" as="sourcePoint"/>
+                        <mxPoint x="400" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
