@@ -100,7 +100,7 @@
                 <mxCell id="35" value="HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="18" vertex="1">
                     <mxGeometry x="10" y="50" width="70" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="Inventory&lt;br&gt;&lt;br&gt;SpellBook" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="18" vertex="1">
+                <mxCell id="44" value="Inventory&lt;br&gt;&lt;br&gt;Spell" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="18" vertex="1">
                     <mxGeometry x="110" y="72.5" width="70" height="55" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="18" target="18" edge="1">
@@ -124,16 +124,16 @@
                         <mxPoint x="400" y="580" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="46" value="Spell" style="swimlane;" vertex="1" parent="1">
+                <mxCell id="46" value="Spell" style="swimlane;" parent="1" vertex="1">
                     <mxGeometry x="560" y="550" width="200" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="47" value="HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="46">
+                <mxCell id="47" value="HealthPoints&lt;br&gt;&lt;br&gt;Attack&lt;br&gt;&lt;br&gt;Defense" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="46" vertex="1">
                     <mxGeometry x="10" y="60" width="70" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="SpellBook" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="46">
+                <mxCell id="48" value="SpellBook" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="46" vertex="1">
                     <mxGeometry x="120" y="82.5" width="70" height="55" as="geometry"/>
                 </mxCell>
-                <mxCell id="49" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="46" target="46">
+                <mxCell id="49" value="" style="endArrow=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.502;entryY=0.115;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="46" target="46" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="409.76" y="690" as="sourcePoint"/>
                         <mxPoint x="410" y="590" as="targetPoint"/>
