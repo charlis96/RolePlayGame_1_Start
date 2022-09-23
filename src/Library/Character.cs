@@ -11,25 +11,26 @@ using System;
 
 namespace Program
 {
-    interface IStrike
-    {
-
-    }
     public class Character
     {
-        public string Name;
+        public string Name { get; set; }
         public int HealthPoints { get; set; }
         public int Defense { get; set; }
         public int Damage { get; set; }
         public int MagicPower { get; set; }
-        public void setDefense(Inventory Object)
+        public virtual void setDefense(Inventory Object)
         {
             this.Defense += Object.UpgrateDefense();
+        }
+        public virtual void setDamage(Inventory Object)
+        {
+            this.Damage += Object.UpgrateDamage();
         }
 
         public Character()
         {
             this.HealthPoints = 100;
+            this.Defense = 1; 
         }
 
 
@@ -51,11 +52,10 @@ namespace Program
         {
 
         }
-        public void Increase(Inventory Object)
+        public virtual void  Increase(Inventory Object)
         {
             this.Damage += Object.UpgrateDamage();
             this.Defense += Object.UpgrateDefense();
-            this.MagicPower += Object.UpgrateMagicPower();
         }
 
         public void InventoryCatalog()
@@ -65,25 +65,12 @@ namespace Program
             */
             Inventory[] backpack = new Inventory[3];
         }
-    }
-    public class Elf : Character , IStrike 
-    {
-        public int extraHeal;
-
-        public void Healing(Character Personaje)
+        public void RemoveItem(Inventory Item)
         {
-            Personaje.HealthPoints += extraHeal;
+            /*
+                Para sacar items de la lista de objetos que tiene en el inventario (en la lista)
+            */
         }
-    }
-
-    public class Wizzard : Character , IStrike 
-    {
-
-    }
-
-    public class Dwarf : Character , IStrike 
-    {
-
     }
 }
 
