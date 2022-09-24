@@ -1,6 +1,10 @@
 <mxfile host="65bd71144e">
     <diagram id="7y4WtiPqoED0MTe5usec" name="Page-1">
+<<<<<<< HEAD
         <mxGraphModel dx="364" dy="213" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+=======
+        <mxGraphModel dx="295" dy="219" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+>>>>>>> 95eb93adbcd8ba90794a3f22d0f900ff52ee4cb9
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -70,7 +74,11 @@
                 <mxCell id="32" value="+ Attack : int&#10;+ Defense : int&#10;+ HP : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=6;" parent="6" vertex="1">
                     <mxGeometry y="26" width="60" height="30" as="geometry"/>
                 </mxCell>
+<<<<<<< HEAD
                 <mxCell id="33" value="+ AddItem()&#10;+ RemoveItem()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=6;" parent="6" vertex="1">
+=======
+                <mxCell id="33" value="+ AddItem(Item)&#10;+ RemoveItem(Item)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=6;" parent="6" vertex="1">
+>>>>>>> 95eb93adbcd8ba90794a3f22d0f900ff52ee4cb9
                     <mxGeometry y="70" width="80" height="20" as="geometry"/>
                 </mxCell>
                 <mxCell id="34" value="" style="endArrow=none;html=1;fontSize=6;" parent="6" edge="1">
@@ -135,7 +143,11 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="46" value="Miscellaneous" style="swimlane;" parent="1" vertex="1">
+<<<<<<< HEAD
                     <mxGeometry x="219" y="413" width="110" height="100" as="geometry">
+=======
+                    <mxGeometry x="214" y="409" width="110" height="100" as="geometry">
+>>>>>>> 95eb93adbcd8ba90794a3f22d0f900ff52ee4cb9
                         <mxRectangle x="190" y="250" width="81" height="23" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
@@ -165,8 +177,13 @@
                         <mxPoint x="110" y="59.99999999999994" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+<<<<<<< HEAD
                 <mxCell id="70" value="+ AddSpell()&#10;+ RemoveSpell()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=6;" parent="49" vertex="1">
                     <mxGeometry y="65" width="60" height="30" as="geometry"/>
+=======
+                <mxCell id="70" value="+ AddSpell(Spell)&#10;+ RemoveSpell(Spell)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=6;" parent="49" vertex="1">
+                    <mxGeometry y="65" width="72" height="30" as="geometry"/>
+>>>>>>> 95eb93adbcd8ba90794a3f22d0f900ff52ee4cb9
                 </mxCell>
                 <mxCell id="55" value="Spell" style="swimlane;" parent="1" vertex="1">
                     <mxGeometry x="425" y="428" width="110" height="100" as="geometry">
