@@ -8,7 +8,7 @@
  Poder Magico ---> Es posible q lo saquemos ya que podemos asumir que es más o menos lo mismo q Daño, pero para los magos
 */
 using System;
-
+using System.Collections.Generic;
 namespace Program
 {
     public class Character
@@ -18,6 +18,8 @@ namespace Program
         public int Defense { get; set; }
         public int Damage { get; set; }
         public int MagicPower { get; set; }
+        public bool PortarLibro = false;
+        public List<Inventory> backpack = new List<Inventory> (); // Aca definimos el maximo de cosas que puede tener en el inventario
         public virtual void setDefense(Inventory Object)
         {
             this.Defense += Object.UpgrateDefense();
@@ -26,13 +28,6 @@ namespace Program
         {
             this.Damage += Object.UpgrateDamage();
         }
-
-        public Character()
-        {
-            this.HealthPoints = 100;
-            this.Defense = 1; 
-        }
-
 
         public virtual void Atack(Character Personaje)
         {
@@ -58,21 +53,36 @@ namespace Program
             this.Defense += Object.UpgrateDefense();
         }
 
-        public void InventoryCatalog()
-        {
-            /*
-                Aca definimos el maximo de cosas que puede tener en el inventario 
-            */
-            Inventory[] backpack = new Inventory[3];
-        }
         public void RemoveItem(Inventory Item)
         {
             /*
                 Para sacar items de la lista de objetos que tiene en el inventario (en la lista)
             */
         }
+
+        public string AddItem (Inventory item)
+        {
+            if (backpack.Count<3)
+            {
+                backpack.Add(item);
+                return "Se ha agregado el item a su inventario.";
+            }
+            else
+            {
+                return "No se ha podido agregar el item, ya no contiene más espacio.";
+            }
+        }
+
+        public void Portar(Character personaje)   
+        {
+            if (personaje.PortarLibro == true)
+            {
+                
+            }
+        }
     }
 }
+
 
 /*
     Acá estoy usando herencía.

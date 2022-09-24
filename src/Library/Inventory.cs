@@ -1,6 +1,5 @@
 /*
-    clase inventario, y cada espada, hacha o lo q sea son objetos de esta clase
-    Tambien podriamos hacer como en onventario  
+    Clase inventario, y cada espada, hacha o lo q sea son objetos de esta clase 
 */
 using System;
 namespace Program
@@ -11,7 +10,7 @@ namespace Program
         public int extraDefense;
         public int extraMagicPower;
         public int extraHealing;
-
+        
         public Inventory(int extraDamage, int extraDefense, int extraMagicPower, int extraHealing)
         {
             this.extraDefense = extraDefense;
@@ -19,6 +18,8 @@ namespace Program
             this.extraMagicPower = extraDefense;
             this.extraHealing = extraHealing;
         }
+
+        
         public string Name;
 
         public int UpgrateDefense()
@@ -40,8 +41,6 @@ namespace Program
         {
             return this.extraHealing;
         }
-
-        
     }
 }
 
