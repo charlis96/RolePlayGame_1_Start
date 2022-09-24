@@ -13,11 +13,28 @@ namespace Program
 {
     public class Elf : Character , IStrike 
         {
-            public int extraHeal;
+            public int HealPower;
+            public Elf (string name)
+            {
+                this.Name = name;
+                this.HealthPoints= 10;
+                this.Defense = 3;
+                this.Damage = 1;
+                this.MagicPower = 0;
+                this.HealPower = 1;
+            }
+
+            public override void  Increase(Inventory item)
+            {
+            this.Damage += item.UpgrateDamage();
+            this.Defense += item.UpgrateDefense();
+            this.MagicPower += item.UpgrateMagicPower();
+            this.HealPower += item.UpgrateHealing();
+            }
 
             public void SpecialHability(Character Personaje)
             {
-                Personaje.HealthPoints += extraHeal;
+                Personaje.HealthPoints += 1*(HealPower);
             }
         }
 }

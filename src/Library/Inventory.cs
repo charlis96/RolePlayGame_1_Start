@@ -19,7 +19,6 @@ namespace Program
             this.extraHealing = extraHealing;
         }
 
-        
         public string Name;
 
         public int UpgrateDefense()

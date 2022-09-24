@@ -20,6 +20,7 @@ namespace Program
         public int MagicPower { get; set; }
         public bool PortarLibro = false;
         public List<Inventory> backpack = new List<Inventory> (); // Aca definimos el maximo de cosas que puede tener en el inventario
+
         public virtual void setDefense(Inventory Object)
         {
             this.Defense += Object.UpgrateDefense();
@@ -47,10 +48,12 @@ namespace Program
         {
 
         }
-        public virtual void  Increase(Inventory Object)
+        public virtual void  Increase(Inventory item)
         {
-            this.Damage += Object.UpgrateDamage();
-            this.Defense += Object.UpgrateDefense();
+            this.Damage += item.UpgrateDamage();
+            this.Defense += item.UpgrateDefense();
+            this.MagicPower += item.UpgrateMagicPower();
+            
         }
 
         public void RemoveItem(Inventory Item)

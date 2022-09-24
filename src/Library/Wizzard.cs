@@ -5,6 +5,14 @@ namespace Program
     public class Wizzard : Character , IStrike 
 
         {   
+            public Wizzard (string name)
+            {
+                this.Name = name;
+                this.HealthPoints= 10;
+                this.Defense = 2;
+                this.Damage = 1;
+                this.MagicPower = 1;
+            }
             new public bool PortarLibro = true;
             public void Power(SpellBook book)
             // La idea de Magicpower es que aumente el impacto de las habilidades especiales
