@@ -24,7 +24,7 @@ namespace Program
             
             public void SpecialHability(Character Personaje)
             {
-                Personaje.HealthPoints -= (this.Damage - Personaje.Defense)*2; //Debido a su furia en el combate
+                Personaje.HealthPoints -= (this.Damage)*2 - Personaje.Defense; //Debido a su furia en el combate
             }
         }
 }

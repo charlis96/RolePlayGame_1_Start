@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Program;
 
 namespace Test.Library
 {
@@ -7,9 +8,9 @@ namespace Test.Library
         [Test]
         public void ValidName()
         {
-            string expectedname = "Harringi";
-            Wizzard Harringi = new Wizzard 
-            Assert.True(true);
+            string expectedname = "Harry";
+            Wizzard Harry = new Wizzard ("Harry");
+            Assert.AreEqual(expectedname,Harry.Name);
         }
     }
 }

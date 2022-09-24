@@ -56,11 +56,12 @@ namespace Program
             
         }
 
-        public void RemoveItem(Inventory Item)
+        public void RemoveItem(Inventory item)
         {
             /*
                 Para sacar items de la lista de objetos que tiene en el inventario (en la lista)
             */
+            
         }
 
         public string AddItem (Inventory item)
