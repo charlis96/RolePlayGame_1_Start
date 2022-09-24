@@ -2,44 +2,55 @@
     Clase inventario, y cada espada, hacha o lo q sea son objetos de esta clase 
 */
 using System;
+using System.Collections;
+
 namespace Roleplay
 {
     public class Inventory
     {
-        public int ExtraDamage;
-        public int ExtraDefense;
-        public int ExtraMagicPower;
-        public int ExtraHealing;
-        public bool ContainsSpellBook=false;        
-        public Inventory(int extraDamage, int extraDefense, int extraMagicPower, int extraHealing)
+        public ArrayList Items { get; set; }
+        public int Damage { get; set; }
+        public int Defense { get; set; }
+        public int HealthPoints { get; set; }
+        public int MagicPower { get; set; }
+        public bool ContainsSpellBook { get; set; } = false;
+
+        public void AddItem(T item)
         {
-            this.ExtraDefense = extraDefense;
-            this.ExtraDamage = extraDamage;
-            this.ExtraMagicPower = extraDefense;
-            this.ExtraHealing = extraHealing;
+            this.Items.Add(item);
+            this.Damage = item.Damage;
+
         }
 
-        public string Name;
+        // public Inventory()
+        // {
+        //     this.Defense = defense;
+        //     this.Damage = damage;
+        //     this.HealthPoints = healthPoints;
+        //     this.MagicPower = magicPower;
+        // }
 
-        public int UpgradeDefense()
-        {
-            return this.ExtraDefense;
-        }
+        // public string Name;
 
-        public int UpgradeDamage()
-        {
-            return this.ExtraDamage;
-        }
+        // public int UpgradeDefense()
+        // {
+        //     return this.ExtraDefense;
+        // }
 
-        public int UpgradeMagicPower()
-        {
-            return this.ExtraMagicPower;
-        }
+        // public int UpgradeDamage()
+        // {
+        //     return this.ExtraDamage;
+        // }
 
-        public int UpgradeHealing()
-        {
-            return this.ExtraHealing;
-        }
+        // public int UpgradeMagicPower()
+        // {
+        //     return this.ExtraMagicPower;
+        // }
+
+        // public int UpgradeHealing()
+        // {
+        //     return this.ExtraHealing;
+        // }
     }
 }
 
