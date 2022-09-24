@@ -9,7 +9,7 @@
 */
 using System;
 using System.Collections.Generic;
-namespace Program
+namespace Roleplay
 {
     public class Character
     {
@@ -19,40 +19,28 @@ namespace Program
         public int Damage { get; set; }
         public int MagicPower { get; set; }
         public bool PortarLibro = false;
+        
         public List<Inventory> backpack = new List<Inventory> (); // Aca definimos el maximo de cosas que puede tener en el inventario
 
         public virtual void setDefense(Inventory Object)
         {
-            this.Defense += Object.UpgrateDefense();
+            this.Defense += Object.UpgradeDefense();
         }
         public virtual void setDamage(Inventory Object)
         {
-            this.Damage += Object.UpgrateDamage();
+            this.Damage += Object.UpgradeDamage();
         }
 
-        public virtual void Atack(Character Personaje)
+        public virtual void Attack(Character Personaje)
         {
             Personaje.HealthPoints -= (this.Damage - Personaje.Defense);
         }
 
-        public void deffend()
-        /*
-           No se si este metodo es necesario ya que existe la posibildad de 
-           que en el metodo "Atack" se tome en cuanta la defensa y se haga 
-           el ataque resultante de la resta del ataque con la defensa, 
-           restando así el resultado con la vida del personaje atacado.
-           O no se si podemos crear un metodo que sepa cuando lo atacan 
-           para restarele el daño que le hacen.
-           Pero considero mejor la primera opción.
-        */
-        {
-
-        }
         public virtual void  Increase(Inventory item)
         {
-            this.Damage += item.UpgrateDamage();
-            this.Defense += item.UpgrateDefense();
-            this.MagicPower += item.UpgrateMagicPower();
+            this.Damage += item.UpgradeDamage();
+            this.Defense += item.UpgradeDefense();
+            this.MagicPower += item.UpgradeMagicPower();
             
         }
 
@@ -61,7 +49,7 @@ namespace Program
             /*
                 Para sacar items de la lista de objetos que tiene en el inventario (en la lista)
             */
-            
+
         }
 
         public string AddItem (Inventory item)
@@ -77,9 +65,9 @@ namespace Program
             }
         }
 
-        public void Portar(Character personaje)   
+        public virtual void Portar(Character character)   
         {
-            if (personaje.PortarLibro == true)
+            if (character.PortarLibro == true)
             {
                 
             }

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace Program
+namespace Roleplay
 {
-    public class SpellBook : Inventory
+    public class SpellBook 
     {
         /*
             No se si esta clase es necesario, solo que la letra habla especificamente de esto, 
@@ -11,22 +11,6 @@ namespace Program
             para los libros.
         */
         public List<Spell> book = new List<Spell> ();
-        public SpellBook(int extraDamage, int extraDefense, int extraMagicPower, int extraHealing) : base ( extraDamage,  extraDefense, extraMagicPower, extraHealing) 
-        /*
-            Preguntar a que se debe q no tenga que poner el tipo de variable que son, ¿es debido a que lo aclare en al clase padre/superclase?
-        */
-        /*
-            Podemos hacer que los libros le agregeen algún poder especial.
-        */
-        {
-            this.extraDefense = extraDefense;
-            this.extraDamage = extraDamage;
-            this.extraMagicPower = extraDefense;
-        } 
-        new public int UpgrateMagicPower() //No se si dejarlo aca o en la clase inventory
-        {
-            return this.extraDefense;
-        }
         public string AddSpell (Spell spell)
         {
                 book.Add(spell);

@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Program;
+using Roleplay;
 
 namespace Test.Library
 {
@@ -9,7 +9,7 @@ namespace Test.Library
         public void ValidName()
         {
             string expectedname = "Harry";
-            Wizzard Harry = new Wizzard ("Harry");
+            Wizard Harry = new Wizard ("Harry");
             Assert.AreEqual(expectedname,Harry.Name);
         }
     }

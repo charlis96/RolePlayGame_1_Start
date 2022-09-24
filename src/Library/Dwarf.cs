@@ -1,6 +1,6 @@
 using System;
 
-namespace Program
+namespace Roleplay
 {
     public class Dwarf : Character , IStrike 
         {
@@ -19,7 +19,7 @@ namespace Program
                 ej: si una espada agrega 2 de daño, en este caso agregaria 3
             */
             {
-                this.Damage += (Object.UpgrateDamage())+1;
+                this.Damage += (Object.UpgradeDamage())+1;
             }
             
             public void SpecialHability(Character Personaje)

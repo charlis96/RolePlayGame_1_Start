@@ -1,5 +1,5 @@
 using System;
-namespace Program
+namespace Roleplay
 {
     public class Spell : Inventory
     {
@@ -9,7 +9,7 @@ namespace Program
             this.extraDamage = extraDamage;
             this.extraMagicPower = extraDefense;
         } 
-        new public int UpgrateMagicPower() //No se si dejarlo aca o en la clase inventory
+        new public int UpgradeMagicPower() //No se si dejarlo aca o en la clase inventory
         {
             return this.extraDefense;
         }

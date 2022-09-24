@@ -1,6 +1,6 @@
 using System;
 
-namespace Program
+namespace Roleplay
 {
     public interface IStrike
     {       
@@ -11,7 +11,7 @@ namespace Program
         public int MagicPower { get; set; }
         
 
-        public void Atack(Character Personaje); 
+        public void Attack(Character Personaje); 
         public void SpecialHability(Character Personaje);
         
     }

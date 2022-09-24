@@ -9,7 +9,7 @@
 */
 using System;
 
-namespace Program
+namespace Roleplay
 {
     public class Elf : Character , IStrike 
         {
@@ -26,10 +26,10 @@ namespace Program
 
             public override void  Increase(Inventory item)
             {
-            this.Damage += item.UpgrateDamage();
-            this.Defense += item.UpgrateDefense();
-            this.MagicPower += item.UpgrateMagicPower();
-            this.HealPower += item.UpgrateHealing();
+            this.Damage += item.UpgradeDamage();
+            this.Defense += item.UpgradeDefense();
+            this.MagicPower += item.UpgradeMagicPower();
+            this.HealPower += item.UpgradeHealing();
             }
 
             public void SpecialHability(Character Personaje)

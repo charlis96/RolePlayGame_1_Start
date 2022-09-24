@@ -2,43 +2,43 @@
     Clase inventario, y cada espada, hacha o lo q sea son objetos de esta clase 
 */
 using System;
-namespace Program
+namespace Roleplay
 {
     public class Inventory
     {
-        public int extraDamage;
-        public int extraDefense;
-        public int extraMagicPower;
-        public int extraHealing;
-        
+        public int ExtraDamage;
+        public int ExtraDefense;
+        public int ExtraMagicPower;
+        public int ExtraHealing;
+        public bool ContainsSpellBook=false;        
         public Inventory(int extraDamage, int extraDefense, int extraMagicPower, int extraHealing)
         {
-            this.extraDefense = extraDefense;
-            this.extraDamage = extraDamage;
-            this.extraMagicPower = extraDefense;
-            this.extraHealing = extraHealing;
+            this.ExtraDefense = extraDefense;
+            this.ExtraDamage = extraDamage;
+            this.ExtraMagicPower = extraDefense;
+            this.ExtraHealing = extraHealing;
         }
 
         public string Name;
 
-        public int UpgrateDefense()
+        public int UpgradeDefense()
         {
-            return this.extraDefense;
+            return this.ExtraDefense;
         }
 
-        public int UpgrateDamage()
+        public int UpgradeDamage()
         {
-            return this.extraDamage;
+            return this.ExtraDamage;
         }
 
-        public int UpgrateMagicPower()
+        public int UpgradeMagicPower()
         {
-            return this.extraMagicPower;
+            return this.ExtraMagicPower;
         }
 
-        public int UpgrateHealing()
+        public int UpgradeHealing()
         {
-            return this.extraHealing;
+            return this.ExtraHealing;
         }
     }
 }
