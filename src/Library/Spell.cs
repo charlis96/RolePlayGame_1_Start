@@ -1,17 +1,19 @@
-using System;
 namespace Roleplay
 {
-    public class Spell : Inventory
+    public class Spell
     {
-        public Spell(int extraDamage, int extraDefense, int extraMagicPower, int extraHealing) : base ( extraDamage,  extraDefense, extraMagicPower, extraHealing) 
+        public string Name { get; set; }
+        public int Damage { get; set; }
+        public int Defense { get; set; }
+        public int TotalHealthPoints { get; set; }
+        public int MagicPower { get; set; }
+        public Spell(string name, int damage, int defense, int totalHealthPoints, int magicPower)
         {
-            this.extraDefense = extraDefense;
-            this.extraDamage = extraDamage;
-            this.extraMagicPower = extraDefense;
-        } 
-        new public int UpgradeMagicPower() //No se si dejarlo aca o en la clase inventory
-        {
-            return this.extraDefense;
+            this.Name = name;
+            this.Damage = damage;
+            this.Defense = defense;
+            this.TotalHealthPoints = totalHealthPoints;
+            this.MagicPower = magicPower;
         }
     }
 }

@@ -1,14 +1,12 @@
 namespace Roleplay;
 
-public class Armor
+public class Armor : Item
 {
-    public string Name { get; }
-    public int Defense { get; }
-
     public Armor(string name, int defense)
     {
         this.Name = name;
+        this.Damage = 0;
         this.Defense = defense;
+        this.TotalHealthPoints = 0;
     }
-
 }

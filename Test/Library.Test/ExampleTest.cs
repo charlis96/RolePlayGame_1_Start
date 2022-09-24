@@ -9,8 +9,8 @@ namespace Test.Library
         public void ValidName()
         {
             string expectedname = "Harry";
-            Wizard Harry = new Wizard ("Harry");
-            Assert.AreEqual(expectedname,Harry.Name);
+            Wizard Harry = new Wizard("Harry");
+            Assert.AreEqual(expectedname, Harry.Name);
         }
     }
 }

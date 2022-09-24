@@ -2,43 +2,43 @@ using System;
 
 namespace Roleplay
 {
-    public class Wizard : Character, IStrike
-
+    public class Wizard : Character, IAttack
     {
+        public bool HasSpellBook { get; set; } = false;
+
         public Wizard(string name)
         {
             this.Name = name;
-            this.HealthPoints = 10;
-            this.Defense = 2;
             this.Damage = 1;
-            this.MagicPower = 1;
-        }
-        new public static bool PortarLibro = true;
-        public void Power(SpellBook book)
-        // La idea de Magicpower es que aumente el impacto de las habilidades especiales
-        {
-            this.Damage += book.UpgradeDamage();
-            this.Defense += book.UpgradeDefense();
-            this.MagicPower = +book.UpgradeMagicPower(); // La idea de Magicpower es que aumente el impacto de las habilidades especiales
-        }
-        public void SpecialHability(Character Personaje)
-        /*
-            La idea de la habilidad especial del mago es que le reduzca la defensa al que recibe su ataque 
-        */
-        {
-            Personaje.Defense -= 2 * (this.MagicPower);
+            this.Defense = 2;
+            this.TotalHealthPoints = 12;
+            this.HealthPoints = 12;
+            this.MagicPower = 0;
+            this.HealingPotions = 3;
         }
 
-        public override void Portar(Character character)
+        public void AddSpellBook(SpellBook spellBook)
         {
-            if (character.PortarLibro == true)
+            if (!HasSpellBook)
             {
-
+                HasSpellBook = true;
+                this.Damage += spellBook.Damage;
+                this.Defense += spellBook.Defense;
+                this.HealthPoints += spellBook.TotalHealthPoints;
+                this.MagicPower += spellBook.MagicPower;
+                Console.WriteLine($"Se ha añadido un libro de hechizos al mago {this.Name}.");
             }
+
+            else
+            {
+                Console.WriteLine("Este mago ya tiene un libro de hechizos.");
+            }
+        }
+
+        public void SpecialAbility(Character character)
+        //La idea de la habilidad especial del mago es que le reduzca la defensa al que recibe su ataque
+        {
+            character.Defense -= this.MagicPower;
         }
     }
 }
-
-/*
-    Falta hacer que los personajes no se puedan poner libros 
-*/

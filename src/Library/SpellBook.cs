@@ -3,35 +3,21 @@ using System.Collections.Generic;
 
 namespace Roleplay
 {
-    public class SpellBook 
+    public class SpellBook
     {
-        /*
-            No se si esta clase es necesario, solo que la letra habla especificamente de esto, 
-            pero podriamos hacer que sea un objeto más en lugar de crear una clase solamente 
-            para los libros.
-        */
-        public List<Spell> book = new List<Spell> ();
-        public string AddSpell (Spell spell)
+        public List<Spell> spells { get; set; }
+        public int Damage { get; set; } = 0;
+        public int Defense { get; set; } = 0;
+        public int TotalHealthPoints { get; set; } = 0;
+        public int MagicPower { get; set; } = 0;
+        public void AddSpell(Spell spell)
         {
-                book.Add(spell);
-                return "Se ha añadido el hechizo a tu libro.";
-        }
-
-        public void Effects ()
-        {
-            foreach (Spell spell in book)
-            {
-                this.extraDefense =+ spell.extraDefense;
-                this.extraDamage =+ spell.extraDamage;
-                this.extraMagicPower =+ spell.extraDefense;
-                /*
-                    Se puede hacer q aqui afecte directamente al personaje q lo tiene puesto 
-                    en vez de afectar al libro y que el libro afecte al personaje, pq me genera 
-                    duda con el tema de expert, pero si así cumple el patrón lo dejamos así.
-                    Cada mago tendra un unico libro.
-
-                */
-            }
+            this.spells.Add(spell);
+            this.Damage += spell.Damage;
+            this.Defense += spell.Defense;
+            this.TotalHealthPoints += spell.TotalHealthPoints;
+            this.MagicPower += spell.MagicPower;
+            Console.WriteLine($"Se ha añadido el hechizo {spell.Name} al libro.");
         }
     }
 }

@@ -1,30 +1,21 @@
-using System;
-
 namespace Roleplay
 {
-    public class Dwarf : Character , IStrike 
+    public class Dwarf : Character, IAttack
+    {
+        public Dwarf(string name)
         {
-            public Dwarf (string name)
-            {
-                this.Name = name;
-                this.HealthPoints= 10;
-                this.Defense = 3;
-                this.Damage = 1;
-                this.MagicPower = 0;
-            }
-        
-            public override void setDamage(Inventory Object)
-            /*
-                La idea de este metodo es que si son armas cuerpo a cuerpo su aumento de daño incremente en 1, 
-                ej: si una espada agrega 2 de daño, en este caso agregaria 3
-            */
-            {
-                this.Damage += (Object.UpgradeDamage())+1;
-            }
-            
-            public void SpecialHability(Character Personaje)
-            {
-                Personaje.HealthPoints -= (this.Damage)*2 - Personaje.Defense; //Debido a su furia en el combate
-            }
+            this.Name = name;
+            this.Damage = 2;
+            this.Defense = 3;
+            this.TotalHealthPoints = 20;
+            this.HealthPoints = 20;
+            this.MagicPower = 0;
+            this.HealingPotions = 3;
         }
+
+        public void SpecialAbility(Character character)
+        {
+            character.HealthPoints -= (this.Damage) * 2 - character.Defense; //Debido a su furia en el combate
+        }
+    }
 }

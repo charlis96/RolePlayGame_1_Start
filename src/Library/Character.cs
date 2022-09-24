@@ -1,83 +1,72 @@
-/*
- Caracteristicas en comun:
- Nombre
- Descripción
- Vida
- Ataque
- Defensa
- Poder Magico ---> Es posible q lo saquemos ya que podemos asumir que es más o menos lo mismo q Daño, pero para los magos
-*/
 using System;
-using System.Collections.Generic;
+
 namespace Roleplay
 {
     public class Character
     {
         public string Name { get; set; }
-        public int HealthPoints { get; set; }
-        public int Defense { get; set; }
         public int Damage { get; set; }
+        public int Defense { get; set; }
+        public int TotalHealthPoints { get; set; }
+        public int HealthPoints { get; set; }
         public int MagicPower { get; set; }
-        public bool PortarLibro = false;
-        
-        public List<Inventory> backpack = new List<Inventory> (); // Aca definimos el maximo de cosas que puede tener en el inventario
+        public int HealingPotions { get; set; }
+        public Inventory CharacterInventory { get; set; }
 
-        public virtual void setDefense(Inventory Object)
+        public void Attack(Character character)
         {
-            this.Defense += Object.UpgradeDefense();
-        }
-        public virtual void setDamage(Inventory Object)
-        {
-            this.Damage += Object.UpgradeDamage();
+            character.HealthPoints -= this.Damage / character.Defense;
+            Console.WriteLine($"{this.Name} atacó a {character.Name} por {this.Damage / character.Defense} de daño.");
         }
 
-        public virtual void Attack(Character Personaje)
+        public void Heal(Character character)
         {
-            Personaje.HealthPoints -= (this.Damage - Personaje.Defense);
-        }
-
-        public virtual void  Increase(Inventory item)
-        {
-            this.Damage += item.UpgradeDamage();
-            this.Defense += item.UpgradeDefense();
-            this.MagicPower += item.UpgradeMagicPower();
-            
-        }
-
-        public void RemoveItem(Inventory item)
-        {
-            /*
-                Para sacar items de la lista de objetos que tiene en el inventario (en la lista)
-            */
-
-        }
-
-        public string AddItem (Inventory item)
-        {
-            if (backpack.Count<3)
+            if (this.HealingPotions > 0)
             {
-                backpack.Add(item);
-                return "Se ha agregado el item a su inventario.";
+                character.HealthPoints = character.TotalHealthPoints;
+                this.HealingPotions--;
+                Console.WriteLine($"Poción curativa usada. A {this.Name} le quedan {this.HealingPotions} pociones curativas.");
             }
+
             else
             {
-                return "No se ha podido agregar el item, ya no contiene más espacio.";
+                Console.WriteLine($"A {this.Name} no le quedan más pociones curativas.");
             }
         }
 
-        public virtual void Portar(Character character)   
+        public void AddItem(Item item)
         {
-            if (character.PortarLibro == true)
+            if (CharacterInventory.ItemQuantity <= Inventory.MaxItems)
             {
-                
+                this.CharacterInventory.Items.Add(item);
+                this.CharacterInventory.Damage += item.Damage;
+                this.CharacterInventory.Defense += item.Defense;
+                this.CharacterInventory.TotalHealthPoints += item.TotalHealthPoints;
+                this.CharacterInventory.ItemQuantity++;
+                Console.WriteLine($"Se ha añadido el item {item.Name} al inventario.");
             }
+
+            else
+            {
+                Console.WriteLine("No se puede agregar item, el inventario está lleno.");
+            }
+        }
+
+        public void RemoveItem(Item item)
+        {
+            this.CharacterInventory.Items.Add(item);
+            this.CharacterInventory.Damage -= item.Damage;
+            this.CharacterInventory.Defense -= item.Defense;
+            this.CharacterInventory.TotalHealthPoints -= item.TotalHealthPoints;
+            this.CharacterInventory.ItemQuantity--;
+            Console.WriteLine($"Se ha removido el item {item.Name} del inventario.");
         }
     }
 }
 
 
 /*
-    Acá estoy usando herencía.
+    Acá estoy usando herencia.
 */
 
 /*
