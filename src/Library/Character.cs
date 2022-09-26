@@ -13,10 +13,18 @@ namespace Roleplay
         public int HealingPotions { get; set; }
         public Inventory CharacterInventory { get; set; }
 
+        
         public void Attack(Character character)
         {
-            character.HealthPoints -= this.Damage / character.Defense;
-            Console.WriteLine($"{this.Name} atacó a {character.Name} por {this.Damage / character.Defense} de daño.");
+            if (this.Damage > character.Defense)
+            {
+                character.HealthPoints -= this.Damage / character.Defense; // esta bien, si algo así, 11 en plaza cuba, par para, ¿es nossar en el qeu se  gol, mira
+                Console.WriteLine($"{this.Name} atacó a {character.Name} por {this.Damage / character.Defense} de daño.");
+            }
+            else
+            {
+                Console.WriteLine($"{this.Name}  atacó a {character.Name} pero no logro hacerle daño debido a su nivel de armadura.");
+            }
         }
 
         public void Heal(Character character)
@@ -45,7 +53,6 @@ namespace Roleplay
                 this.CharacterInventory.ItemQuantity++;
                 Console.WriteLine($"Se ha añadido el item {item.Name} al inventario.");
             }
-
             else
             {
                 Console.WriteLine("No se puede agregar item, el inventario está lleno.");

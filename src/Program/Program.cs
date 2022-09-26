@@ -14,6 +14,15 @@ namespace Program
             Character[] Jugador1 = new Character[3];
             Character[] Jugador2 = new Character[3];
 
+            Wizard Harry = new Wizard("Harry");
+            Elf Juan = new Elf ("Juan");
+            Console.WriteLine(Harry.HealthPoints);
+            Juan.Attack(Harry); // se
+            Console.WriteLine(Harry.HealthPoints);
+            
+            Weapon Sword = new Weapon("Sword", 4);
+            Harry.AddItem(Sword);
+            Console.WriteLine(Harry.Damage);
         }
 
     }

@@ -11,6 +11,7 @@ namespace Roleplay
             this.HealthPoints = 20;
             this.MagicPower = 0;
             this.HealingPotions = 3;
+            CharacterInventory = new Inventory();
         }
 
         public void SpecialAbility(Character character)

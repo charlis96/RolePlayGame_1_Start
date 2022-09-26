@@ -15,6 +15,7 @@ namespace Roleplay
             this.HealthPoints = 12;
             this.MagicPower = 0;
             this.HealingPotions = 3;
+            CharacterInventory = new Inventory(); 
         }
 
         public void AddSpellBook(SpellBook spellBook)
