@@ -10,3 +10,9 @@ public class Miscellaneous : Item
         this.TotalHealthPoints = totalHealthPoints;
     }
 }
+
+/*
+    Utilizamos esta clase para el caso que existan items 
+    que no se consideren armas ni armadura pero que de 
+    igual forma aporten características al personaje 
+*/

@@ -29,6 +29,10 @@ namespace Roleplay
         }
 
         public void Heal(Character character)
+        /*
+            Este metodo se realiza de esta forma ya que tiene el proposito de poder 
+            compartir las posciones que tiene un personaje con otros.
+        */
         {
             if (this.HealingPotions > 0)
             {
@@ -42,6 +46,7 @@ namespace Roleplay
                 Console.WriteLine($"A {this.Name} no le quedan más pociones curativas.");
             }
         }
+        
 
         public void AddItem(Item item)
         {
@@ -72,42 +77,3 @@ namespace Roleplay
         }
     }
 }
-
-
-/*
-    Acá estoy usando herencia.
-*/
-
-/*
-    Podria ser q por ejemplo el mago tenga varios ataques y 
-    haya un selector de número al azar que segun ese número 
-    el ataque q realiza y el daño q aplica
-*/
-
-/*
-    Tambien podemos hacer que tengan un número limitado de elementos
-    de cierto tipo como armadura o armas y tambien poner un limitador 
-    que por ejemplo un enano no pueda tener un libro 
-*/
-
-/*
-    Puede ser que cuando alguien ataque a otro personaje le saque la "vida"
-    a la armadura por ejemplo por ejemplo si aguien ataca y tiene dos puntos
-    ese ataque
-*/
-
-/*
-    Si el personaje no tiene arma, ¿puede atacar?
-*/
-
-/*
-    Se utiliza estas clases para realizar ya que consideramos que son las expertas 
-    debido a que saben el ataque que tiene por defecto el personaje y ademas se le
-    suma el ataque extra que le agregan los objetos como armas entre otras cosas.
-*/
-
-/*
-    Estaria bueno que los objetos de los personajes fueran como al azar, pero que 
-    el jugador tuviera la opcion de cambiarlo por otro objeto aleatorio también 
-    sacrificando así uno de los que ya tenía.
-*/

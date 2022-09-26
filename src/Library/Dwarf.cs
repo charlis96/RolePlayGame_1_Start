@@ -1,3 +1,5 @@
+using System;
+
 namespace Roleplay
 {
     public class Dwarf : Character, ISpecialAbility
@@ -16,7 +18,16 @@ namespace Roleplay
 
         public void SpecialAbility(Character character)
         {
-            character.HealthPoints -= (this.Damage) * 2 - character.Defense; //Debido a su furia en el combate
+            int DamageDone = this.Damage * 2 / character.Defense;
+            if (DamageDone >= 1)
+            {
+                character.HealthPoints -= (DamageDone)*2;//Debido a su furia en el combate
+                Console.WriteLine($"{this.Name} atacó a {character.Name}  con toda su furia y realizó un daño por {DamageDone} puntos de daño.");
+            } 
+             else
+            {
+                Console.WriteLine($"{this.Name} atacó a {character.Name} pero no logro hacerle daño debido a su nivel de armadura.");
+            }
         }
     }
 }

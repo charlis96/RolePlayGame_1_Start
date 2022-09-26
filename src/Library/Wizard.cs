@@ -14,12 +14,17 @@ namespace Roleplay
             this.Defense = 2;
             this.TotalHealthPoints = 12;
             this.HealthPoints = 12;
-            this.MagicPower = 0;
+            this.MagicPower = 1;
             this.HealingPotions = 3;
             this.CharacterInventory = new Inventory();
         }
 
         public void AddSpellBook()
+        /*
+            Con este metodo nos aseguramos de que solo este tipo de personaje 
+            sea capaz de portar un libro de hechizos y por lo tanto utilizar 
+            hechizos, esto se debe a que es un metodo especifico de esta clase.
+        */
         {
             if (!HasSpellBook)
             {
@@ -52,7 +57,7 @@ namespace Roleplay
         }
 
         public void SpecialAbility(Character character)
-        //La idea de la habilidad especial del mago es que le reduzca la defensa al que recibe su ataque
+        //La idea de la habilidad especial del mago consiste en reducir la defensa al que recibe su ataque especial.
         {
             character.Defense -= this.MagicPower;
         }
