@@ -112,7 +112,6 @@ namespace Test.Library
             bool ExpectedHasSpellBook = true;
             Harry.AddSpellBook();
             Assert.AreEqual(ExpectedHasSpellBook, Harry.HasSpellBook);
-
         }
 
         [Test]
@@ -123,7 +122,6 @@ namespace Test.Library
             Harry.AddSpellBook();
             Harry.AddSpellBook();
             Assert.AreEqual(ExpectedHasSpellBook, Harry.HasSpellBook);
-
         }
 
         [Test]
