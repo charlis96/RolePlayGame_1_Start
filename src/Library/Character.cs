@@ -45,7 +45,7 @@ namespace Roleplay
 
         public void AddItem(Item item)
         {
-            if (CharacterInventory.ItemQuantity <= Inventory.MaxItems)
+            if (this.CharacterInventory.ItemQuantity < Inventory.MaxItems)
             {
                 this.CharacterInventory.Items.Add(item);
                 this.Damage += item.Damage;
@@ -54,6 +54,7 @@ namespace Roleplay
                 this.CharacterInventory.ItemQuantity++;
                 Console.WriteLine($"Se ha añadido el item {item.Name} al inventario.");
             }
+
             else
             {
                 Console.WriteLine("No se puede agregar item, el inventario está lleno.");

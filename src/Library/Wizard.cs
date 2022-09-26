@@ -19,10 +19,11 @@ namespace Roleplay
             this.CharacterInventory = new Inventory();
         }
 
-        public void AddSpellBook(SpellBook spellBook)
+        public void AddSpellBook()
         {
             if (!HasSpellBook)
             {
+                this.WizardSpellBook = new SpellBook();
                 HasSpellBook = true;
                 Console.WriteLine($"Se ha añadido un libro de hechizos al mago {this.Name}.");
             }

@@ -5,6 +5,6 @@ namespace Roleplay
 {
     public class SpellBook
     {
-        public List<Spell> Spells { get; set; }
+        public List<Spell> Spells { get; set; } = new List<Spell> { };
     }
 }
