@@ -13,17 +13,18 @@ namespace Roleplay
         public int HealingPotions { get; set; }
         public Inventory CharacterInventory { get; set; }
 
-        
+
         public void Attack(Character character)
         {
-            if (this.Damage > character.Defense)
+            int DamageDone = this.Damage * 2 / character.Defense;
+            if (DamageDone >= 1)
             {
-                character.HealthPoints -= this.Damage / character.Defense; // esta bien, si algo así, 11 en plaza cuba, par para, ¿es nossar en el qeu se  gol, mira
-                Console.WriteLine($"{this.Name} atacó a {character.Name} por {this.Damage / character.Defense} de daño.");
+                character.HealthPoints -= DamageDone;
+                Console.WriteLine($"{this.Name} atacó a {character.Name} por {DamageDone} de daño.");
             }
             else
             {
-                Console.WriteLine($"{this.Name}  atacó a {character.Name} pero no logro hacerle daño debido a su nivel de armadura.");
+                Console.WriteLine($"{this.Name} atacó a {character.Name} pero no logro hacerle daño debido a su nivel de armadura.");
             }
         }
 
@@ -47,9 +48,9 @@ namespace Roleplay
             if (CharacterInventory.ItemQuantity <= Inventory.MaxItems)
             {
                 this.CharacterInventory.Items.Add(item);
-                this.CharacterInventory.Damage += item.Damage;
-                this.CharacterInventory.Defense += item.Defense;
-                this.CharacterInventory.TotalHealthPoints += item.TotalHealthPoints;
+                this.Damage += item.Damage;
+                this.Defense += item.Defense;
+                this.TotalHealthPoints += item.TotalHealthPoints;
                 this.CharacterInventory.ItemQuantity++;
                 Console.WriteLine($"Se ha añadido el item {item.Name} al inventario.");
             }
@@ -61,10 +62,10 @@ namespace Roleplay
 
         public void RemoveItem(Item item)
         {
-            this.CharacterInventory.Items.Add(item);
-            this.CharacterInventory.Damage -= item.Damage;
-            this.CharacterInventory.Defense -= item.Defense;
-            this.CharacterInventory.TotalHealthPoints -= item.TotalHealthPoints;
+            this.CharacterInventory.Items.Remove(item);
+            this.Damage -= item.Damage;
+            this.Defense -= item.Defense;
+            this.TotalHealthPoints -= item.TotalHealthPoints;
             this.CharacterInventory.ItemQuantity--;
             Console.WriteLine($"Se ha removido el item {item.Name} del inventario.");
         }

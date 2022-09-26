@@ -1,6 +1,6 @@
 namespace Roleplay
 {
-    public class Dwarf : Character, IAttack
+    public class Dwarf : Character, ISpecialAbility
     {
         public Dwarf(string name)
         {
@@ -11,7 +11,7 @@ namespace Roleplay
             this.HealthPoints = 20;
             this.MagicPower = 0;
             this.HealingPotions = 3;
-            CharacterInventory = new Inventory();
+            this.CharacterInventory = new Inventory();
         }
 
         public void SpecialAbility(Character character)

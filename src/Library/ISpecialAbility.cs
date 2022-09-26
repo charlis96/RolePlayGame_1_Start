@@ -1,6 +1,6 @@
 namespace Roleplay
 {
-    public interface IAttack
+    public interface ISpecialAbility
     {
         public void SpecialAbility(Character character);
     }

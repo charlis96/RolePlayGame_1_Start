@@ -2,9 +2,10 @@ using System;
 
 namespace Roleplay
 {
-    public class Wizard : Character, IAttack
+    public class Wizard : Character, ISpecialAbility
     {
         public bool HasSpellBook { get; set; } = false;
+        public SpellBook WizardSpellBook { get; set; }
 
         public Wizard(string name)
         {
@@ -15,7 +16,7 @@ namespace Roleplay
             this.HealthPoints = 12;
             this.MagicPower = 0;
             this.HealingPotions = 3;
-            CharacterInventory = new Inventory(); 
+            this.CharacterInventory = new Inventory();
         }
 
         public void AddSpellBook(SpellBook spellBook)
@@ -23,16 +24,29 @@ namespace Roleplay
             if (!HasSpellBook)
             {
                 HasSpellBook = true;
-                this.Damage += spellBook.Damage;
-                this.Defense += spellBook.Defense;
-                this.HealthPoints += spellBook.TotalHealthPoints;
-                this.MagicPower += spellBook.MagicPower;
                 Console.WriteLine($"Se ha añadido un libro de hechizos al mago {this.Name}.");
             }
 
             else
             {
                 Console.WriteLine("Este mago ya tiene un libro de hechizos.");
+            }
+        }
+        public void AddSpell(Spell spell)
+        {
+            if (HasSpellBook)
+            {
+                this.WizardSpellBook.Spells.Add(spell);
+                this.Damage += spell.Damage;
+                this.Defense += spell.Defense;
+                this.TotalHealthPoints += spell.TotalHealthPoints;
+                this.MagicPower += spell.MagicPower;
+                Console.WriteLine($"Se ha añadido el hechizo {spell.Name} al libro de hechizos de {this.Name}.");
+            }
+
+            else
+            {
+                Console.WriteLine($"No se ha podido añadir el hechizo porque {this.Name} no tiene un libro de hechizos.");
             }
         }
 
