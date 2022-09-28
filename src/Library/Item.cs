@@ -1,5 +1,7 @@
 namespace Roleplay;
-
+/*
+ 
+*/
 public class Item
 {
     public string Name { get; protected set; }

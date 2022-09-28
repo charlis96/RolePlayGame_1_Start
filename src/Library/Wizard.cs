@@ -1,6 +1,9 @@
 using System;
 
 namespace Roleplay
+/*
+        La clase Wizard se hereda de la clase Character y ISpecialAbility. 
+*/
 {
     public class Wizard : Character, ISpecialAbility
     {
@@ -38,6 +41,10 @@ namespace Roleplay
                 Console.WriteLine("Este mago ya tiene un libro de hechizos.");
             }
         }
+        /*
+        Si este personaje tiene un libro de hechizo, con este método puede agregar hechizos.
+        Si no se le informará que no puede añadir.
+        */
         public void AddSpell(Spell spell)
         {
             if (HasSpellBook)

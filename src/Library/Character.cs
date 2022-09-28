@@ -13,7 +13,15 @@ namespace Roleplay
         public int HealingPotions { get; set; }
         public Inventory CharacterInventory { get; set; }
 
+/*
+    Para este método pensamos en los factores bases que podían afectar a este y su efecto a otros objetos que,
+    en este caso, serían personajes afectando así su vida, al momento de pensar en este método pensamos en realizarlo
+    con una una división ya que de esta manera se tardaría más en acabar con otro personaje haciendo así que el juego
+     dure más tiempo.
+    Además consideramos el caso en que el atacante no tuviera e suficiente daño como para dañar a su victima 
+    por lo cual agregamos un condicional if
 
+*/
         public void Attack(Character character)
         {
             int DamageDone = this.Damage * 2 / character.Defense;
@@ -27,12 +35,12 @@ namespace Roleplay
                 Console.WriteLine($"{this.Name} atacó a {character.Name} pero no logro hacerle daño debido a su nivel de armadura.");
             }
         }
-
+    /*
+        Este método se realiza de esta forma ya que tiene el proposito de poder compartir las posiciones que tiene
+         un personaje con otros.
+    */
+        
         public void Heal(Character character)
-        /*
-            Este metodo se realiza de esta forma ya que tiene el proposito de poder 
-            compartir las posciones que tiene un personaje con otros.
-        */
         {
             if (this.HealingPotions > 0)
             {
@@ -47,7 +55,9 @@ namespace Roleplay
             }
         }
         
-
+/*
+    Este método agrega los items a una lista 
+*/
         public void AddItem(Item item)
         {
             if (this.CharacterInventory.ItemQuantity < Inventory.MaxItems)
@@ -65,7 +75,9 @@ namespace Roleplay
                 Console.WriteLine("No se puede agregar item, el inventario está lleno.");
             }
         }
-
+/*
+    Para este método se utiliza la misma lista del método anterior, con el fin de quitar items. 
+*/
         public void RemoveItem(Item item)
         {
             this.CharacterInventory.Items.Remove(item);

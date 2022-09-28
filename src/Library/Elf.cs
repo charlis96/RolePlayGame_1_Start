@@ -1,5 +1,8 @@
 namespace Roleplay
 {
+    /*
+        Al igual que Dwarf, esta clase se hereda de la clase Character y ISpecialAbility.
+    */
     public class Elf : Character, ISpecialAbility
     {
         public Elf(string name)
@@ -13,7 +16,9 @@ namespace Roleplay
             this.HealingPotions = 3;
             this.CharacterInventory = new Inventory();
         }
-
+/*
+    
+*/
         public void SpecialAbility(Character character)
         {
             character.TotalHealthPoints++; //Da vida permanentemente con una flecha (?)
