@@ -1,6 +1,8 @@
 namespace Roleplay;
 /*
- Se creó esta clase para crear los items.
+ Se creó esta clase con el fin de crear
+  los items que luego se van a atribuir 
+  a los personajes del juego en su inventario . 
 */
 public class Item
 {

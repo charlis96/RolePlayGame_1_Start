@@ -4,7 +4,9 @@ using System.Collections;
 namespace Roleplay
 {
     /*
-        En esta clase se guardan los items.
+        En esta clase contribuye la clase item 
+        ya que dentro de inventory es donde 
+        se guardan los items.
     */
 
     public class Inventory

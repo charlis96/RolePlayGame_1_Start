@@ -3,7 +3,7 @@ using System;
 namespace Roleplay
 {
 /*
-    La clase Dwarf se hereda de la clase Character y ISpecialAbility. 
+    La clase Dwarf se hereda de la clase Character y ISpecialAbility.
 
 */
     public class Dwarf : Character, ISpecialAbility

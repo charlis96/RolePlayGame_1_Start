@@ -1,4 +1,8 @@
 namespace Roleplay
+    
+    /*
+        creamos una interfaz SpecialAbility 
+    */
 {
     public interface ISpecialAbility
     {

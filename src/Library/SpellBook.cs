@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 namespace Roleplay
 /*
-    En esta clase se crea una lista, como libro,  para luego agregar los hechizos.
+    En esta clase se crea una lista (como libro) 
+    para luego agregar los hechizos.
 */
 {
     public class SpellBook
