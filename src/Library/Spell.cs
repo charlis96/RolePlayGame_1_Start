@@ -1,5 +1,8 @@
 namespace Roleplay
 {
+    /*
+        Esta clase se creó con el fin de crear los hechizos.
+    */
     public class Spell
     {
         public string Name { get; set; }
