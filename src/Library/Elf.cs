@@ -1,7 +1,7 @@
 namespace Roleplay
 {
     /*
-        Al igual que Dwarf, esta clase se hereda de la clase Character y ISpecialAbility.
+        Al igual que Dwarf, esta clase se hereda de la clase Character e implementa ISpecialAbility.
     */
     public class Elf : Character, ISpecialAbility
     {
@@ -16,12 +16,12 @@ namespace Roleplay
             this.HealingPotions = 3;
             this.CharacterInventory = new Inventory();
         }
-/*
-    
-*/
+    /*
+        En este caso la habilidad especial consta de aumentar la vida maxima de un personaje.
+    */
         public void SpecialAbility(Character character)
         {
-            character.TotalHealthPoints++; //Da vida permanentemente con una flecha (?)
+            character.TotalHealthPoints++; //Da vida permanentemente con una flecha 
         }
     }
 }

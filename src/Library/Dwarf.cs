@@ -19,10 +19,10 @@ namespace Roleplay
             this.HealingPotions = 3;
             this.CharacterInventory = new Inventory();
         }
-/*
-    Este método imprime en la consola si logró o no hacerle daño a su oponente.
-    En caso afirmativo, nos indica cuantos puntos de daño logró.
-*/
+        /*
+            Este método imprime en la consola si logró o no hacerle daño a su oponente.
+            En caso afirmativo, nos indica cuantos puntos de daño logró.
+        */
         public void SpecialAbility(Character character)
         {
             int DamageDone = this.Damage * 2 / character.Defense;
