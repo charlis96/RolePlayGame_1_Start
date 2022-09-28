@@ -1,6 +1,6 @@
 namespace Roleplay;
 /*
- 
+ Se creó esta clase para crear los items.
 */
 public class Item
 {

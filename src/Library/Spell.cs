@@ -1,7 +1,11 @@
 namespace Roleplay
 {
     /*
+<<<<<<< HEAD
         
+=======
+        Esta clase se creó con el fin de crear los hechizos.
+>>>>>>> 1a5e6ba2830ddeb9d3ee97dc0a1b7fc433d57b4f
     */
     public class Spell
     {
